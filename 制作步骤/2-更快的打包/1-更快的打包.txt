@@ -1,0 +1,14 @@
+不用每次在 cmd 都输入
+.\node_modules\.bin\webpack
+
+修改package.json
+在它的
+"scripts": {
+里加入代码
+"build": "webpack"
+
+修改webpack.config.js
+
+cmd输入
+npm run build
+就可以运行

@@ -1,0 +1,47 @@
+eslint 代码错误检测官方
+https://eslint.org/
+
+cmd
+npm install eslint --save-dev
+
+修改package.json
+添加代码
+"lintjs": "eslint app/ webpack.*js --cache"
+
+复制.eslintrc.js 到根目录
+
+安装eslint-loader
+npm install eslint-loader --save-dev
+
+修改webpack.config.js
+添加代码
+module:{
+	rules:[
+	  {
+	    test: /\.js$/,
+	    enforce: 'pre',
+
+	    loader: 'eslint-loader',
+	    options: {
+	      emitWarning: true,
+	    },
+	  },
+	],
+},
+和
+var webpack = require('webpack');
+和
+overlay: {
+  errors: true,
+  //抛出错误
+  warnings: true,
+  //抛出警告
+},
+
+之后可以用
+npm run start
+也会进行代码错误判断
+
+以后报错可以使用
+npm run lintjs -- --fix
+可以自动修正错误代码

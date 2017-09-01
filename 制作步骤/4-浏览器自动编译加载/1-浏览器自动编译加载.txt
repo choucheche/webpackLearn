@@ -1,0 +1,22 @@
+cmd安装 网页自动加载
+npm install --save-dev webpack-dev-server
+
+修改webpack.config.js
+添加代码
+/*网页自动加载*/
+devServer: {
+  contentBase: './dist'
+},
+/*网页自动加载 结束*/
+
+修改package.json
+修改代码
+"scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1",
+	"build": "webpack",
+	"start": "webpack-dev-server --open",
+},
+
+cmd
+npm start
+就可以自动更新页面内容了

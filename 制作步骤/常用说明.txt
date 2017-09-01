@@ -1,0 +1,13 @@
+安装插件时
+--save-dev是指将包信息添加到devDependencies，表示你开发时依赖的包裹。
+比如 gulp,webpack
+
+--save是指将包信息添加到dependencies，表示你发布时依赖的包裹。
+比如 jquery,react
+
+npm run start
+也会进行代码错误判断
+
+以后报错可以使用
+npm run lintjs -- --fix
+可以自动修正错误代码

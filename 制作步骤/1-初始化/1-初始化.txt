@@ -1,0 +1,14 @@
+npm init -y
+//初始化项目
+
+npm install webpack --save-dev
+
+新建文件
+/webpack.config.js
+
+新建 src/Greeter.js
+新建 src/index.js
+新建 dist/index.html
+
+cmd 输入
+.\node_modules\.bin\webpack src/index.js dist/bundle.js
